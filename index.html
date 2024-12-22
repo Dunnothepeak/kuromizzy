@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuromi's Love Meter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kuromi's Love Meter</h1>
+        <div class="kuromi-container">
+            <img id="kuromi-img" src="https://i.imgur.com/PpHES01.jpg" alt="Kuromi" class="kuromi-img">
+            <div class="speech-bubble">
+                <p id="question">Do you know the person named Gerome?</p>
+            </div>
+        </div>
+        
+        <div id="answers" class="answer-buttons">
+            <button onclick="answer('yes')">Yes</button>
+            <button onclick="answer('maybe')">Maybe</button>
+            <button onclick="answer('no')">No</button>
+        </div>
+
+        <div id="love-meter" class="love-meter-container">
+            <p>Love Meter: <span id="love-level">50</span>%</p>
+            <div id="meter"></div>
+        </div>
+
+        <div id="outcome">
+            <p id="outcome-message"></p>
+            <img id="outcome-img" src="https://via.placeholder.com/250" alt="Final Result" />
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

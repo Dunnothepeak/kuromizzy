@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #181818;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ff66b2, #f9c0cb);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.kuromi-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.kuromi-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.kuromi-img:hover {
+    transform: scale(1.1);
+}
+
+.speech-bubble {
+    background-color: #ff66b2;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 300px;
+    font-size: 18px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -15px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: #ff66b2 transparent transparent transparent;
+}
+
+.answer-buttons {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ff66b2;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 200px;
+}
+
+button:hover {
+    background-color: #ff3385;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.love-meter-container {
+    margin-top: 40px;
+    animation: fadeIn 1s ease-out;
+}
+
+#meter {
+    background-color: #ff66b2;
+    height: 20px;
+    width: 50%;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+#outcome-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff66b2;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#outcome-img {
+    margin-top: 20px;
+    max-width: 100%; /* Makes the image responsive */
+    max-height: 300px; /* Set a max height */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
